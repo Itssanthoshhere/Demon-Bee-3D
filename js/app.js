@@ -17,6 +17,8 @@ loader.load(
   "/3D-model/demon_bee_full_texture.glb",
   function (gltf) {
     bee = gltf.scene;
+    bee.position.y = -1;
+    bee.rotation.y = 1.5;
     scene.add(bee);
   },
   function (xhr) {},
@@ -26,6 +28,14 @@ loader.load(
 const renderer = new THREE.WebGLRenderer({ alpha: true });
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.getElementById("container3D").appendChild(renderer.domElement);
+
+// light
+const ambientLight = new THREE.AmbientLight(0xffffff, 1.3);
+scene.add(ambientLight);
+
+const topLight = new THREE.DirectionalLight(0xffffff, 1);
+topLight.position.set(500, 500, 500);
+scene.add(topLight);
 
 const reRender3D = () => {
   requestAnimationFrame(reRender3D);
