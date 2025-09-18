@@ -108,3 +108,14 @@ header .content-fit nav ul {
   font-size: 5em;
   font-weight: bold;
 }
+
+#description .content-fit {
+  padding-right: 30%;
+}
+#description .number {
+  font-size: 5em;
+}
+#description .title {
+  font-size: 7em;
+  font-weight: 500;
+}
