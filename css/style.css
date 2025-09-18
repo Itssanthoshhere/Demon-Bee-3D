@@ -70,3 +70,20 @@ header .content-fit nav ul {
   display: flex;
   gap: 2em;
 }
+
+#banner .title {
+  color: #d1ff48;
+  font-size: 11em;
+  font-family: "devil breeze";
+  font-weight: bold;
+  position: relative;
+  text-align: center;
+}
+#banner .title::before {
+  content: attr(data-before);
+  position: absolute;
+  top: 0.5em;
+  inset: 0.66em 0 0 0;
+  z-index: -1;
+  color: #445022;
+}
