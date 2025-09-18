@@ -1,32 +1,40 @@
+/* Importing fonts */
 @import url("https://fonts.cdnfonts.com/css/devil-breeze");
 @import url("https://fonts.cdnfonts.com/css/poppins");
 @import url("https://fonts.cdnfonts.com/css/bimbo");
 
+/* Global body styling */
 body {
   margin: 0;
-  font-family: "Montserrat", sans-serif;
-  background-color: #1b1b1b;
-  color: #eef8ce;
-  font-family: "Poppins", sans-serif;
-  font-size: 14px;
+  font-family: "Montserrat", sans-serif; /* fallback font */
+  background-color: #1b1b1b; /* dark background */
+  color: #eef8ce; /* text color */
+  font-family: "Poppins", sans-serif; /* main font */
+  font-size: 14px; /* default font size */
   background-image: url(/assets/bg.png),
-    repeating-linear-gradient(
-      to right,
-      transparent 0 500px,
-      #73814b33 500px 501px
-    );
+    /* background image */
+      repeating-linear-gradient(
+        to right,
+        transparent 0 500px,
+        #73814b33 500px 501px
+      ); /* subtle overlay grid */
   background-size: 100%;
 }
+
+/* Hide scrollbar */
 *::-webkit-scrollbar {
   width: 0;
 }
 
+/* Reset styles and box-sizing */
 * {
   padding: 0;
   margin: 0;
   list-style: none;
   box-sizing: border-box;
 }
+
+/* Section container */
 .section {
   width: 100%;
   min-height: 100vh;
@@ -36,6 +44,7 @@ body {
   align-items: center;
 }
 
+/* Inner container for content */
 .content-fit {
   width: min(1200px, 90vw);
   margin: auto;
@@ -43,21 +52,24 @@ body {
   position: relative;
   padding-block: 10em;
 }
+
+/* Header styling */
 header {
   padding-block: 1em;
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 10px;
-  backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px); /* blur background for transparency */
   z-index: 100;
-  background-color: #1b1b1b11;
+  background-color: #1b1b1b11; /* transparent background */
   background-image: repeating-linear-gradient(
     to right,
     transparent 0 500px,
     #eee1 500px 501px
   );
 }
+
+/* Header inner content */
 header .content-fit {
   display: flex;
   justify-content: space-between;
@@ -65,11 +77,14 @@ header .content-fit {
   min-height: unset !important;
   padding-block: unset !important;
 }
+
+/* Header navigation menu */
 header .content-fit nav ul {
   display: flex;
   gap: 2em;
 }
 
+/* Banner title styling */
 #banner .title {
   color: #d1ff48;
   font-size: 11em;
@@ -78,6 +93,8 @@ header .content-fit nav ul {
   position: relative;
   text-align: center;
 }
+
+/* Banner title shadow effect */
 #banner .title::before {
   content: attr(data-before);
   position: absolute;
@@ -86,25 +103,35 @@ header .content-fit nav ul {
   z-index: -1;
   color: #445022;
 }
+
+/* Decorative elements in sections */
 .section .decorate {
   position: absolute;
 }
+
+/* Intro section layout */
 #intro .content-fit {
   display: flex;
   gap: 30%;
   justify-content: space-between;
   align-items: center;
 }
+
+/* Large numbers in sections */
 .section .number {
   font-family: "devil breeze";
   font-size: 15em;
   font-weight: bold;
 }
+
+/* Titles inside sections */
 .section .content-fit .title {
   font-family: "devil breeze";
   font-size: 5em;
   font-weight: bold;
 }
+
+/* Description section layout */
 #description .content-fit {
   padding-right: 30%;
 }
@@ -115,6 +142,8 @@ header .content-fit nav ul {
   font-size: 7em;
   font-weight: 500;
 }
+
+/* Contact section layout */
 #contact .content-fit {
   display: flex;
   justify-content: center;
@@ -122,6 +151,8 @@ header .content-fit nav ul {
   flex-direction: column;
   text-align: center;
 }
+
+/* Contact table styling */
 #contact table {
   width: min(800px, 90vw);
   padding-top: 2em;
@@ -140,19 +171,22 @@ header .content-fit nav ul {
   text-align: right;
   font-weight: 200;
 }
+
+/* Contact signature styling */
 #contact .sign {
   font-family: "Bimbo", sans-serif;
   font-size: 10em;
 }
 
+/* 3D container fixed overlay */
 #container3D {
   position: fixed;
   inset: 0;
-  /* background-color: red; */
   z-index: 100;
   pointer-events: none;
 }
 
+/* Responsive adjustments for tablets */
 @media screen and (max-width: 1023px) {
   #banner .title {
     font-size: 5em;
@@ -161,6 +195,8 @@ header .content-fit nav ul {
     flex-direction: column;
   }
 }
+
+/* Responsive adjustments for mobile */
 @media screen and (max-width: 767px) {
   #banner .title {
     font-size: 3em;
