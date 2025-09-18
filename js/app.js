@@ -10,8 +10,10 @@ const camera = new THREE.PerspectiveCamera(
 camera.position.z = 13;
 
 const scene = new THREE.Scene();
+
 let bee;
 let mixer;
+
 const loader = new GLTFLoader();
 loader.load(
   "/3D-model/demon_bee_full_texture.glb",
@@ -20,6 +22,9 @@ loader.load(
     bee.position.y = -1;
     bee.rotation.y = 1.5;
     scene.add(bee);
+
+    mixer = new THREE.AnimationMixer(bee);
+    mixer.clipAction(gltf.animations[0]).play();
   },
   function (xhr) {},
   function (error) {}
@@ -40,6 +45,7 @@ scene.add(topLight);
 const reRender3D = () => {
   requestAnimationFrame(reRender3D);
   renderer.render(scene, camera);
+  if (mixer) mixer.update(0.02);
 };
 
 reRender3D();
