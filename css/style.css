@@ -87,3 +87,24 @@ header .content-fit nav ul {
   z-index: -1;
   color: #445022;
 }
+
+.section .decorate {
+  position: absolute;
+}
+
+#intro .content-fit {
+  display: flex;
+  gap: 30%;
+  justify-content: space-between;
+  align-items: center;
+}
+.section .number {
+  font-family: "devil breeze";
+  font-size: 15em;
+  font-weight: bold;
+}
+.section .content-fit .title {
+  font-family: "devil breeze";
+  font-size: 5em;
+  font-weight: bold;
+}
