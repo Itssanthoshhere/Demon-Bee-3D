@@ -119,3 +119,33 @@ header .content-fit nav ul {
   font-size: 7em;
   font-weight: 500;
 }
+
+#contact .content-fit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+#contact table {
+  width: min(800px, 90vw);
+  padding-top: 2em;
+  font-size: 2em;
+  margin: auto;
+}
+#contact table td {
+  padding-block: 0.5em;
+  border-bottom: 1px dashed #445022;
+}
+#contact table td:nth-child(1) {
+  text-align: left;
+  font-weight: 500;
+}
+#contact table td:nth-child(2) {
+  text-align: right;
+  font-weight: 200;
+}
+#contact .sign {
+  font-family: "Bimbo", sans-serif;
+  font-size: 10em;
+}
